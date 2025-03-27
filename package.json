@@ -1,0 +1,27 @@
+{
+    "name": "pixthic",
+    "displayName": "Pixthic Isometric Grid",
+    "description": "An isometric grid drawing plugin for Aseprite.",
+    "version": "1.1",
+    "author": {
+        "name": "Kevser",
+        "email": "",
+        "url": ""
+    },
+    "license": "Copyright (c) 2025 Kevser",
+    "categories": [
+        "Scripts"
+    ],
+    "contributes": {
+        "scripts": [
+            {
+                "id": "isometric-grid",
+                "path": "./plugin-menu.lua"
+            },
+            {
+                "id": "generate-isometric",
+                "path": "./perspectivegrid.lua"
+            }
+        ]
+    }
+}
