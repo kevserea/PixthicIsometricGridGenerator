@@ -1,5 +1,4 @@
-local spr = app.activeSprite
-if not spr then return app.alert("You must open a sprite first!") end
+local spr
 
 -- ==== Helpers ====
 local function supportsLayerColor(layer) return pcall(function() local _=layer.color end) end
@@ -30,12 +29,6 @@ local function sameRGBA(a,b)
 end
 local function setVisibleSafe(layer,v) pcall(function() layer.isVisible=v end) end
 local function setEditableSafe(layer,v) pcall(function() layer.isEditable=v end) end
-
-do
-  local any=false
-  for _,ly in ipairs(targets()) do if supportsLayerColor(ly) then any=true; break end end
-  if not any then return app.alert("layer.color is not available") end
-end
 
 local PRESETS = {
   {name="Mint",    col=Color{ r=180, g=235, b=210, a=255 }},
@@ -149,6 +142,23 @@ dlg:button{
 dlg:button{ text="Close", onclick=function() dlg:close() end }
 
 function showLayerColorLabel()
+  spr = app.activeSprite
+  if not spr then
+    app.alert("You must open a sprite first!")
+    return
+  end
+
+  do
+    local any=false
+    for _,ly in ipairs(targets()) do
+      if supportsLayerColor(ly) then any=true; break end
+    end
+    if not any then
+      app.alert("layer.color is not available")
+      return
+    end
+  end
+
   dlg:show{ wait=false }
 end
 
