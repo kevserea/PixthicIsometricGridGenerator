@@ -3,7 +3,7 @@ Pixthic Tools is a compact suite of Aseprite plugins crafted to enhance your pix
 
 #### 〰
 
-**Pixthic Isometric Grid Generator** is a plugin for Aseprite that helps you generate **isometric grids** easily.  
+**Isometric Grid Generator** is a plugin for Aseprite that helps you generate **isometric grids** easily.  
 
 ## Features  
 ✔ **Customizable grid size** – Adjust the width and height as needed.  
@@ -12,7 +12,7 @@ Pixthic Tools is a compact suite of Aseprite plugins crafted to enhance your pix
 
 #### 〰
 
-**Pixthic LayerColorLabel** is a companion plugin that allows you to colorize, organize, and visually tag layers.
+**Layer Color Label** is a companion plugin that allows you to colorize, organize, and visually tag layers.
 
 ## Features  
 ✔ **Pastel Color Presets** – Mint, Sky, Peach, Lavender, and Butter tones for a clean look.  
